@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Next Number</title>
+</head>
+<body>
+
+<h2>Find Next Number</h2>
+
+<input type="number" id="num" placeholder="Enter Number">
+<button onclick="findNext()">Find</button>
+
+<p id="result"></p>
+
+<script>
+function findNext() {
+    let num = Number(document.getElementById("num").value);
+
+    document.getElementById("result").innerHTML =
+        "Next Number: " + (num + 1);
+}
+</script>
+
+</body>
+</html>

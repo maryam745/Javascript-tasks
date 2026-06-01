@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age to Days Converter</title>
+</head>
+<body>
+
+<h2>Age to Days Converter</h2>
+
+
+<input type="number" id="age" placeholder="Enter Age">
+<button onclick="convertAge()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function convertAge() {
+    let age = document.getElementById("age").value;
+    let days = age * 365;
+
+    document.getElementById("result").innerHTML =
+        "Age in Days: " + days;
+}
+</script>
+
+</body>
+</html>

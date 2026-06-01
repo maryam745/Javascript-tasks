@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hours to Seconds</title>
+</head>
+<body>
+
+<h2>Hours to Seconds Converter</h2>
+
+<input type="number" id="hours" placeholder="Enter Hours">
+<button onclick="convertHours()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function convertHours() {
+    let hours = document.getElementById("hours").value;
+    let seconds = hours * 3600;
+
+    document.getElementById("result").innerHTML =
+        "Seconds: " + seconds;
+}
+</script>
+
+</body>
+</html>

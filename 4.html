@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capitalize Name</title>
+</head>
+<body>
+
+<h2>Capitalize Name</h2>
+
+<input type="text" id="name" placeholder="Enter Name in Lowercase">
+<button onclick="capitalize()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function capitalize() {
+    let name = document.getElementById("name").value;
+
+    let formatted =
+        name.charAt(0).toUpperCase() + name.slice(1);
+
+    document.getElementById("result").innerHTML =
+        formatted;
+}
+</script>
+
+</body>
+</html>
