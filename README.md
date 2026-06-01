@@ -62,5 +62,5 @@ This project contains 7 basic JavaScript programs implemented using HTML and Jav
 - Mathematical Calculations
 
 ## Author
-Maryam Nazar
-Submitted as a JavaScript Assignment.
+- Maryam Nazar
+- Submitted as a JavaScript Assignment.
