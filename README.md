@@ -46,6 +46,17 @@ This project contains 7 basic JavaScript programs implemented using HTML and Jav
   - The sum when both numbers are entered.
 - Demonstrates JavaScript event handling using the `oninput` event.
 
+### 8. Tabbed Navigation Menu
+- Implements a tabbed interface.
+- Allows users to switch between different content sections.
+- Uses JavaScript event handling and DOM manipulation.
+
+### 9. To-Do List
+- Allows users to add tasks dynamically.
+- Displays tasks in a list.
+- Provides the option to delete tasks.
+- Demonstrates DOM manipulation and event handling.
+
 ## Technologies Used
 
 - HTML5
