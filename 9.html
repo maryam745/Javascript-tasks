@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:80%;
+            margin:20px auto;
+        }
+
+        .header{
+            background:#66abd0;
+            padding:25px;
+            text-align:center;
+        }
+
+        .header h1{
+            color:white;
+            margin-bottom:20px;
+        }
+
+        .input-section{
+            display:flex;
+        }
+
+        .input-section input{
+            flex:1;
+            padding:15px;
+            border:none;
+            font-size:16px;
+        }
+
+        .input-section button{
+            width:200px;
+            border:none;
+            background:#ddd;
+            cursor:pointer;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        ul{
+            list-style:none;
+        }
+
+        li{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:18px;
+            border:1px solid #999;
+            font-size:20px;
+        }
+
+        li:nth-child(odd){
+            background:#c7d4df;
+        }
+
+        li:nth-child(even){
+            background:#dddddd;
+        }
+
+        .delete{
+            cursor:pointer;
+            font-size:25px;
+            padding:0 15px;
+        }
+
+        .delete:hover{
+            background:#f16b63;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>To-do-List</h1>
+
+        <div class="input-section">
+            <input type="text" id="task"
+                placeholder="Add your activity here...">
+
+            <button onclick="addTask()">Add</button>
+        </div>
+    </div>
+
+    <ul id="taskList"></ul>
+
+</div>
+
+<script>
+
+function addTask(){
+
+    let taskInput = document.getElementById("task");
+    let taskText = taskInput.value.trim();
+
+    if(taskText === ""){
+        alert("Enter a task first!");
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+        <span>${taskText}</span>
+        <span class="delete" onclick="deleteTask(this)">×</span>
+    `;
+
+    document.getElementById("taskList").appendChild(li);
+
+    taskInput.value = "";
+}
+
+function deleteTask(element){
+    element.parentElement.remove();
+}
+
+</script>
+
+</body>
+</html>

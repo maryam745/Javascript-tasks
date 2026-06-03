@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabbed Navigation Menu</title>
+    <style>
+        .tab {
+            overflow: hidden;
+            background-color: #80bcd6;
+        }
+
+        .tab button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Tabbed Navigation Menu</h2>
+
+<div class="tab">
+    <button onclick="openTab('Home')">Home</button>
+    <button onclick="openTab('About')">About</button>
+    <button onclick="openTab('Contact')">Contact</button>
+</div>
+
+<div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Welcome to Home Page.</p>
+</div>
+
+<div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>Welcome to About Page.</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Welcome to Contact Page.</p>
+</div>
+
+<script>
+function openTab(tabName) {
+    let tabs = document.getElementsByClassName("tabcontent");
+
+    for(let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+
+    document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
+</html>
